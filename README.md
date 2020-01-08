@@ -4,7 +4,7 @@
 1. Spring boot 프로젝트의 루트 폴더에 Vue 템플릿을 구성할 폴더 하나를 생성한다(folder명: frontend)
 2. cmd에서 해당 폴더(frontend)로 접근한 뒤 vue init webpack으로 webpack템플릿을 구성한다.
 ```
-C:\Users\hsjang\IdeaProjects\Hello(프로젝트 명)\gradle(모듈명)\frontend> vue init webpack vue(vue프로젝트 명)
+C:\Users\Username\IdeaProjects\Hello(프로젝트 명)\gradle(모듈명)\frontend> vue init webpack vue(vue프로젝트 명)
 ```
 3. 설정해 줘야 하는 부분들을 설정해 준다.
 
@@ -24,3 +24,9 @@ C:\Users\hsjang\IdeaProjects\Hello(프로젝트 명)\gradle(모듈명)\frontend>
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
 ```
+6. 설정이 끝나면 cmd에서 npm run build를 실행한다
+```
+C:\Users\Username\IdeaProjects\Hello\gradle\frontend\vue> npm run build
+```
+7. 빌드가 완료되면 src/main/resources/static 하위에 번들링된 정적 파일들이 생성된 것을  수 있다.
+8. 이제 Spring Boot 메인 어플리케이션을 실행하고 localhost:8080에 접속하면 Vue화면이 나오는 것을 확인할 수 있다.
