@@ -39,3 +39,8 @@ C:\Users\Username\IdeaProjects\Hello\gradle\frontend\vue> npm run build
 ### 연동방법2(proxy server이용)
 > 연동방법1처럼 하면 vue를 이용해 client쪽 페이지 구성을 바꿀때마다 매번 다시 build해아하고, 나온 결과물들을 resource/static으로 이동하는 번거로움이 있다. 게다가 개발 서버를 spring과 vue각각 하나씩 띄워야 하기 때문에 port번호도 2개로 나뉜다. 그러나 실제 배포 환경에서는 vue로 작성한 코드들은 빌드되어 static 자원으로 바뀌고 요청을 받는 서버는 spring 서버이다. 이런 문제점을 해결하기 위해 vue.js dev서버에 proxy설정을 해서 spring으로 오는 요청들을 모두 vue.js dev에서 proxing해서 받고, spring으로 보내주도록 설정해야 한다. 
 
+---
+
+## this의 scope 차이
+일반 function() { this }의 this는 function()을 호출한 객체를 바라보고 있고
+화살표 함수 () => { this }의 this는 자신이 포함된 상위 객체를 바라보고 있다.
