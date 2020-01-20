@@ -1,7 +1,6 @@
 <template>
     <div class="blue lighten-3 pa-3">
         <h1>CRUD 구현</h1>
-        <p>이름: 출력하기</p>
         <hr>
         <v-layout row wrap>
             <v-flex xs12 sm6>
