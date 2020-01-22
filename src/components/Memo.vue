@@ -4,10 +4,15 @@
         <hr>
         <v-layout row wrap>
             <v-flex xs12 sm6>
-                <MemoDetail></MemoDetail>
+                <MemoDetail @child="parents"></MemoDetail>
             </v-flex>
             <v-flex xs12 sm6>
-                <MemoEdit></MemoEdit>
+                <MemoCreate></MemoCreate>
+            </v-flex>
+        </v-layout>
+        <v-layout row wrap>
+            <v-flex xs12 sm6>
+                <MemoEdit :onememo="memo"></MemoEdit>
             </v-flex>
         </v-layout>
     </div>
@@ -15,12 +20,24 @@
 
 <script>
 import MemoDetail from "./MemoDetail"
+import MemoCreate from "./MemoCreate"
 import MemoEdit from "./MemoEdit"
 
 export default {
     components: {
         MemoDetail,
+        MemoCreate,
         MemoEdit
-    }
+    },
+    data() {
+        return {
+            memo: {}
+        }
+    },
+    methods: {
+        parents(memo) {
+            this.memo = memo
+        }
+    },
 }
 </script>
