@@ -22,7 +22,9 @@
                         {{ tmp.writer }}
                     </v-list-item-content>
                 </v-list-item>
+                <v-list-item class="justify-end">
                 <v-btn @click="deleteData(tmp.seq)">삭제</v-btn>
+                </v-list-item>
             </v-list>
         </div>
     </div>
@@ -54,7 +56,7 @@
                 this.$emit('child', this.memo[index]);
             },
             deleteData(index) {
-                axios.delete('http://localhost:8081/api/deleteData?seq=' + index)
+                axios.delete(`http://localhost:8081/api/deleteData/${index}` )
                     .then(function(response) {
                         console.log(response);
                     })

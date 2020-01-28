@@ -1,18 +1,21 @@
 <template>
   <v-app>
     <v-content>
-      <Memo/>
+      <!--<Memo/>-->
+      <Login/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-  import Memo from "./components/Memo"
+  // import Memo from "./components/Memo"
+  import Login from "./components/Login"
 
   export default {
     name: "App",
     components: {
-      Memo
+      // Memo,
+      Login
     }
   }
 </script>

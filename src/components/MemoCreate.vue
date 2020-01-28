@@ -26,13 +26,15 @@
         },
         methods: {
             addData() {
-                if(this.title != '' && this.writer != '') {
+                if(this.title !== '' && this.writer !== '') {
                     axios.post('http://localhost:8081/api/createData', {
                         title: this.title,
                         writer: this.writer
                     })
-                    .then(function(response) {
+                    .then((response) => {
                         console.log(response);
+                        this.title = '';
+                        this.writer = '';
                     })
                     .catch(function(error) {
                         console.log(error);

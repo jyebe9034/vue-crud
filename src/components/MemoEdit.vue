@@ -46,7 +46,7 @@
                     title: this.memo.title,
                     writer: this.memo.writer
                 })
-                    .then(function (response) {
+                    .then((response) => {
                         console.log(response);
                     })
                     .catch(function (response) {
