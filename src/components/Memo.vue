@@ -6,11 +6,11 @@
             <v-flex xs12 sm6>
                 <MemoDetail @child="parents"></MemoDetail>
             </v-flex>
+        </v-layout>
+        <v-layout row wrap>
             <v-flex xs12 sm6>
                 <MemoCreate></MemoCreate>
             </v-flex>
-        </v-layout>
-        <v-layout row wrap>
             <v-flex xs12 sm6>
                 <MemoEdit :onememo="memo"></MemoEdit>
             </v-flex>
