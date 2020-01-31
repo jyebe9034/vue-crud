@@ -15,6 +15,7 @@
                 <MemoEdit :onememo="memo"></MemoEdit>
             </v-flex>
         </v-layout>
+        <v-btn color="green" @click="logout">Log Out</v-btn>
     </div>
 </template>
 
@@ -37,6 +38,10 @@ export default {
     methods: {
         parents(memo) {
             this.memo = memo
+        },
+        logout() {
+            localStorage.removeItem("isLogin")
+            this.$router.push("/logout");
         }
     },
 }
