@@ -15,18 +15,32 @@
     export default {
         name: 'Login',
         data: () => ({
-            uid: '',
-            password: ''
+            uid: 'pizza@gmail.com',
+            password: 'pizza1234'
         }),
         methods: {
             onSubmit() {
-                axios.get('http://localhost:8081/api/login', {
+                var loginUrl = "http://localhost:8081/api/login";
+                // var loginUrl2 = "http://localhost:8081/api/jpaLogin";
+
+                /*
+                axios.get(loginUrl, {
                     params: {
                         email: this.uid,
                         password: this.password
                     }
                 })
+                 */
+                axios.post(loginUrl, {
+
+                        email: this.uid,
+                        password: this.password
+
+                })
                 .then((response) => {
+
+                    console.log(response);
+
                     if (response.data['result'] === this.uid){
 
                         // this.isSuccess = localStorage.getItem("uid");
